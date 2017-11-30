@@ -2,6 +2,8 @@
 XMRig is high performance Monero (XMR) CPU miner, with the official full Windows support.
 Originally based on cpuminer-multi with heavy optimizations/rewrites and removing a lot of legacy code, since version 1.0.0 complete rewritten from scratch on C++.
 
+This fork includes support for ICC and a binary compiled for i7-4770
+
 * This is the **CPU-mining** version, there is also a [NVIDIA GPU version](https://github.com/xmrig/xmrig-nvidia) and [AMD GPU version]( https://github.com/xmrig/xmrig-amd).
 * [Roadmap](https://github.com/xmrig/xmrig/issues/106) for next releases.
 
@@ -64,7 +66,7 @@ For failover you can add multiple pools, maximum count not limited.
       --cpu-priority    set process priority (0 idle, 2 normal to 5 highest)
       --no-huge-pages   disable huge pages support
       --no-color        disable colored output
-      --donate-level=N  donate level, default 5% (5 minutes in 100 minutes)
+      --donate-level=N  donate level, default 0% (N minutes per 100 minutes)
       --user-agent      set custom user-agent string for pool
   -B, --background      run the miner in the background
   -c, --config=FILE     load a JSON-format configuration file
@@ -94,7 +96,7 @@ Since version 0.8.0.
 ## Other information
 * No HTTP support, only stratum protocol support.
 * No TLS support.
-* Default donation 5% (5 minutes in 100 minutes) can be reduced to 1% via command line option `--donate-level`.
+* Donation has been hacked out by default. Please donate to the original author.
 
 
 ### CPU mining performance
@@ -111,6 +113,8 @@ Please note performance is highly dependent on system load. The numbers above ar
 * Enable fast memory (Large/Huge pages).
 
 ## Donations
+Please donate to the original author:
+
 * XMR: `48edfHu7V9Z84YzzMa6fUueoELZ9ZRXq9VetWzYGzKt52XU5xvqgzYnDK9URnRoJMk1j8nLwEVsaSWJ4fhdUyZijBGUicoD`
 * BTC: `1P7ujsXeX7GxQwHNnJsRMgAdNkFZmNVqJT`
 
